@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery JSON data</title>
+</head>
+<body>
+
+<ul id="list" data-json='{
+"liQuantity": 10,
+"text": "Test paragraph"
+}'></ul>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+<script>
+	$(function() {
+		var $list = $('#list');
+		var $dataJSON = $list.data('json');
+
+		for (var i = 1; i <= $dataJSON.liQuantity; i++) {
+			$list.append('<li>' + $dataJSON.text + ' ' + i + '</li>');
+		}
+	});	
+</script>
+
+</body>
+</html>
