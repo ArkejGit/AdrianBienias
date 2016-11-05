@@ -14,14 +14,14 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 
 <script>
-	$(function() {
-		var $list = $('#list');
-		var $dataJSON = $list.data('json');
+$(function() {
+	var $list = $('#list');
+	var $dataJSON = $list.data('json');
 
-		for (var i = 1; i <= $dataJSON.liQuantity; i++) {
-			$list.append('<li>' + $dataJSON.text + ' ' + i + '</li>');
-		}
-	});	
+	for (var i = 1; i <= $dataJSON.liQuantity; i++) {
+		$list.append('<li>' + $dataJSON.text + ' ' + i + '</li>');
+	}
+});	
 </script>
 
 </body>
