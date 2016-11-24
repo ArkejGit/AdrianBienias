@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS animation glitch effect | Weekly Vlog #8 </title>
+
+	<style>
+		body {
+			background: #000;
+		}
+		.glitch {
+			font-family: sans-serif;
+			font-size: 140px;
+			font-weight: 700;
+			position: absolute;
+			color: #fff;
+			top: 0;
+			left: 0;
+		}
+		.glitch:before,
+		.glitch:after {
+			content: 'myGlitch';
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .85;
+		}
+		.glitch:before {
+			color: #0ff;
+			z-index: -1;
+		}
+		.glitch:after {
+			color: #f0f;
+			z-index: -2;
+		}
+		.glitch:hover:before {
+			animation: glitch-keyframes .4s infinite;		
+		}
+		.glitch:hover:after {
+			animation: glitch-keyframes .4s reverse infinite;		
+		}
+
+		@keyframes glitch-keyframes {
+			0% {
+				transform: translate(0);
+			}
+			20% {
+				transform: translate(-5px,5px);
+			}
+			40% {
+				transform: translate(-5px,-5px);
+			}
+			60% {
+				transform: translate(5px,5px);
+			}
+			80% {
+				transform: translate(5px,-5px);
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<span class="glitch">myGlitch</span>
+</body>
+</html>
